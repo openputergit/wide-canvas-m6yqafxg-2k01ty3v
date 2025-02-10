@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heme Onc Fellows' Corner - Education Hub</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+        .gradient-custom {
+            background: linear-gradient(135deg, #1e40af 0%, #3730a3 100%);
+        }
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        .overlay-grid {
+            background-image: radial-gradient(rgba(255,255,255,0.1) 1px, transparent 1px);
+            background-size: 20px 20px;
+        }
+        .glass-effect {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .curved-shape {
+            position: absolute;
+            width: 100%;
+            height: 150px;
+            bottom: -1px;
+            left: 0;
+        }
+        .text-gradient {
+            background: linear-gradient(120deg, #1e40af, #3730a3);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-white/90 backdrop-blur-md shadow-sm">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center py-4">
+                <a href="#" class="text-2xl font-bold text-gradient">
+                    HemOnc Fellows' Corner
+                </a>
+                <div class="hidden lg:flex space-x-8">
+                    <a href="#about" class="text-gray-700 hover:text-blue-800 font-medium">About</a>
+                    <a href="#education" class="text-gray-700 hover:text-blue-800 font-medium">Education</a>
+                    <a href="#guidelines" class="text-gray-700 hover:text-blue-800 font-medium">Guidelines</a>
+                    <a href="#news" class="text-gray-700 hover:text-blue-800 font-medium">News</a>
+                    <a href="#contact" class="text-gray-700 hover:text-blue-800 font-medium">Contact</a>
+                </div>
+                <button class="lg:hidden text-2xl" id="menuBtn">
+                    <i class="bi bi-list"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div id="mobileMenu" class="fixed inset-0 bg-white transform translate-x-full transition-transform duration-300 z-40">
+        <div class="p-6">
+            <div class="flex justify-end">
+                <button class="text-2xl" id="closeBtn">
+                    <i class="bi bi-x"></i>
+                </button>
+            </div>
+            <div class="flex flex-col space-y-6 mt-10">
+                <a href="#about" class="text-xl text-center text-gray-800">About</a>
+                <a href="#education" class="text-xl text-center text-gray-800">Education</a>
+                <a href="#guidelines" class="text-xl text-center text-gray-800">Guidelines</a>
+                <a href="#news" class="text-xl text-center text-gray-800">News</a>
+                <a href="#contact" class="text-xl text-center text-gray-800">Contact</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="gradient-custom text-white pt-32 pb-24 relative overlay-grid">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col lg:flex-row items-center">
+                <div class="lg:w-1/2 mb-12 lg:mb-0">
+                    <h1 class="text-4xl lg:text-6xl font-bold leading-tight mb-6">
+                        Empowering Future Leaders in Hematology-Oncology
+                    </h1>
+                    <p class="text-xl opacity-90 mb-8">
+                        Your comprehensive resource hub for fellowship education, clinical guidelines, and professional development.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <a href="#resources" class="bg-white text-blue-900 px-8 py-3 rounded-lg font-semibold text-center hover:bg-opacity-90 transition-colors">
+                            Explore Resources
+                        </a>
+                        <a href="#subscribe" class="glass-effect px-8 py-3 rounded-lg font-semibold text-center hover:bg-white/10 transition-colors">
+                            Subscribe Now
+                        </a>
+                    </div>
+                </div>
+                <div class="lg:w-1/2 lg:pl-12">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1581056771107-24ca5f033842?auto=format&fit=crop&q=80" alt="Medical Research" class="rounded-2xl shadow-2xl">
+                        <div class="absolute -bottom-4 -right-4 bg-blue-600 text-white p-6 rounded-lg">
+                            <p class="text-2xl font-bold">200+</p>
+                            <p class="text-sm opacity-90">Educational Resources</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="curved-shape">
+            <svg viewBox="0 0 1440 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill="white" d="M0,64L80,69.3C160,75,320,85,480,80C640,75,800,53,960,48C1120,43,1280,53,1360,58.7L1440,64L1440,120L1360,120C1280,120,1120,120,960,120C800,120,640,120,480,120C320,120,160,120,80,120L0,120Z"></path>
+            </svg>
+        </div>
+    </section>
+
+    <!-- Quick Links -->
+    <section class="py-16">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="bg-white p-6 rounded-xl shadow-lg card-hover">
+                    <i class="bi bi-journal-medical text-4xl text-blue-800 mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-2">Clinical Guidelines</h3>
+                    <p class="text-gray-600">Access the latest treatment protocols and clinical pathways.</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-lg card-hover">
+                    <i class="bi bi-laptop text-4xl text-blue-800 mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-2">Online Learning</h3>
+                    <p class="text-gray-600">Interactive modules and virtual learning resources.</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-lg card-hover">
+                    <i class="bi bi-people text-4xl text-blue-800 mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-2">Fellow Community</h3>
+                    <p class="text-gray-600">Connect with peers and mentors in the field.</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-lg card-hover">
+                    <i class="bi bi-graph-up text-4xl text-blue-800 mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-2">Research Updates</h3>
+                    <p class="text-gray-600">Stay current with latest clinical trials and research.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Resources -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12">Educational Resources</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white rounded-xl overflow-hidden shadow-lg card-hover">
+                    <img src="https://images.unsplash.com/photo-1532938911079-1b06ac7ceec7?auto=format&fit=crop&q=80" alt="Board Review" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-3">Board Review Materials</h3>
+                        <ul class="space-y-2">
+                            <li class="flex items-center"><i class="bi bi-check2-circle text-green-500 mr-2"></i>Question Banks</li>
+                            <li class="flex items-center"><i class="bi bi-check2-circle text-green-500 mr-2"></i>Study Guides</li>
+                            <li class="flex items-center"><i class="bi bi-check2-circle text-green-500 mr-2"></i>Practice Exams</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-xl overflow-hidden shadow-lg card-hover">
+                    <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&q=80" alt="Clinical Cases" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-3">Clinical Cases</h3>
+                        <ul class="space-y-2">
+                            <li class="flex items-center"><i class="bi bi-check2-circle text-green-500 mr-2"></i>Case Studies</li>
+                            <li class="flex items-center"><i class="bi bi-check2-circle text-green-500 mr-2"></i>Virtual Patients</li>
+                            <li class="flex items-center"><i class="bi bi-check2-circle text-green-500 mr-2"></i>Expert Discussions</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-xl overflow-hidden shadow-lg card-hover">
+                    <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&q=80" alt="Research Resources" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-3">Research Resources</h3>
+                        <ul class="space-y-2">
+                            <li class="flex items-center"><i class="bi bi-check2-circle text-green-500 mr-2"></i>Journal Club</li>
+                            <li class="flex items-center"><i class="bi bi-check2-circle text-green-500 mr-2"></i>Literature Reviews</li>
+                            <li class="flex items-center"><i class="bi bi-check2-circle text-green-500 mr-2"></i>Research Guides</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="py-16 gradient-custom text-white">
+        <div class="container mx-auto px-4">
+            <div class="max-w-3xl mx-auto text-center">
+                <h2 class="text-3xl font-bold mb-6">Stay Updated</h2>
+                <p class="mb-8 opacity-90">Subscribe to our newsletter for the latest updates in hematology-oncology education and research.</p>
+                <form class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <input type="email" placeholder="Enter your email" class="px-6 py-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-white/50 flex-grow max-w-md">
+                    <button type="submit" class="bg-white text-blue-900 px-8 py-3 rounded-lg font-semibold hover:bg-opacity-90 transition-colors">
+                        Subscribe
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12">
+                <div class="col-span-1 md:col-span-2">
+                    <h3 class="text-2xl font-bold mb-4">HemOnc Fellows' Corner</h3>
+                    <p class="text-gray-400">Supporting the next generation of hematology-oncology specialists with comprehensive educational resources.</p>
+                </div>
+                <div>
+                    <h4 class="text-xl font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#" class="hover:text-white transition-colors">About Us</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Resources</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Guidelines</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-xl font-semibold mb-4">Connect</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="bi bi-twitter text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="bi bi-linkedin text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="bi bi-instagram text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
+                <p>&copy; 2023 HemOnc Fellows' Corner. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu functionality
+        const menuBtn = document.getElementById('menuBtn');
+        const closeBtn = document.getElementById('closeBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.remove('translate-x-full');
+        });
+
+        closeBtn.addEventListener('click', () => {
+            mobileMenu.classList.add('translate-x-full');
+        });
+
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+<script>document.body.addEventListener('wheel', e => { if (!e.ctrlKey) return; e.preventDefault(); return }, { passive: false })</script>
+	</body>
+</html>
